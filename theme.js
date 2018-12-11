@@ -1,4 +1,4 @@
-import theme from 'mdx-deck/themes'
+import { dark as theme } from 'mdx-deck/themes'
 
 export default {
   ...theme,
@@ -8,5 +8,4 @@ export default {
   // Read the docs for more info:
   // https://github.com/jxnblk/mdx-deck/blob/master/docs/theming.md
   // https://github.com/jxnblk/mdx-deck/blob/master/docs/themes.md
-
 }
