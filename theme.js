@@ -1,7 +1,7 @@
-import { swiss as theme } from 'mdx-deck/themes'
+import { swiss } from '@mdx-deck/themes'
 
 export default {
-  ...theme,
+  ...swiss,
 
   // Customize your presentation theme here.
   //

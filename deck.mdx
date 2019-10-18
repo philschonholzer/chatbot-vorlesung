@@ -1,6 +1,10 @@
 import { Head } from 'mdx-deck'
+import { swiss } from '@mdx-deck/themes'
+import { TitleSplit } from "./layouts";
 
-export { default as theme } from './theme'
+import channels from './channels.png'
+
+export const theme = swiss
 
 <Head>
   <title>Chatbots</title>
@@ -8,11 +12,10 @@ export { default as theme } from './theme'
 
 # Chatbots
 
-[PDF](presentation.pdf)
 
 ---
 
-# Philip Schönholzer
+## Philip Schönholzer
 
 - Wohne in Luzern
 - Kommunikation und Informatik
@@ -21,6 +24,8 @@ export { default as theme } from './theme'
 - Viel unterwegs
 
 ---
+
+import { Notes } from 'mdx-deck'
 
 ## Beispiele von Chatbots
 
@@ -31,14 +36,12 @@ export { default as theme } from './theme'
 - [Selma](https://www.selma.io/de)
 - [Vorwerk Geschäftsbereicht](https://geschaeftsberichte.vorwerk.de/2017/fuehlen/)
 
-```notes
+<Notes>
+
 - Wer kennt noch weitere Beispiele?
 - Schaut euch diese 15min an, um einen Eindruck der heutigen Chatbots zu erhalten
-```
 
----
-
-## Was ist ein Bot?
+</Notes>
 
 ---
 
@@ -53,35 +56,64 @@ export { default as theme } from './theme'
 
 ## Warum Chatbots einsetzen?
 
-![](./channels.png)
+<img src={channels} />
 
-<small>Quelle: http://media-use-index.ch/assets/files/MUI2017.pdf</small>
+<small>Quelle: http://media-use-index.ch/assets/files/MUI2018.pdf</small>
 
-```notes
+<Notes>
+
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
-```
+
+</Notes>
 
 ---
 
 import { Appear } from 'mdx-deck'
-import { TitleSplit } from './layouts'
 
-export default TitleSplit
+<TitleSplit>
+  
+  <h2>
+    Kategorisieren
+  </h2>
 
-## Eigenschaften und Bewertungskriterien
+  <div>
+    <h3>Eigenschaften</h3>
+    <ul>
+      <li>
+        kleiner / grosser Umfang
+      </li>
+      <li>
+        eine Sprache / viele Sprachen
+      </li>
+      <li>
+        ...
+      </li>
+    </ul>
+  </div>
 
-- kleiner / grosser Umfang
-- eine Sprache / viele Sprachen
-- ...
+  <div>
+    <h3>Bewertungskriterien</h3>
+    <ul>
+      <li>
+        Zielerreichung
+      </li>
+      <li>
+        Einfachheit
+      </li>
+      <li>
+        ...
+      </li>
+    </ul>
+  </div>
 
-* Zielerreichung
-* Einfachheit
-* ...
+</TitleSplit>
 
-```notes
+<Notes>
+
 Eigenschaften
+
 - Bot führt / Besucher führt
 - Freitext / Fixe Antworten
 - FAQ / Assistent
@@ -90,14 +122,16 @@ Eigenschaften
 - Nur Text / Bilder, Ton, Video
 
 Bewertungskriterien
-* Absichten korrekt verstanden
-* Funktionen sind klar
-* Fallback
-* Chatbot Challenge
 
-- Kategorisiert und Bewertet den Chatbot (Zweiergruppe)
-- 3min vorstellen
-```
+- Absichten korrekt verstanden
+- Funktionen sind klar
+- Fallback
+- Chatbot Challenge
+
+* Kategorisiert und Bewertet den Chatbot (Zweiergruppe)
+* 3min vorstellen
+
+</Notes>
 
 ---
 
@@ -107,10 +141,6 @@ Bewertungskriterien
 - Bewertet nach Kriterien
 
 (3min je Gruppe)
-
-```notes
-
-```
 
 ---
 
@@ -138,13 +168,17 @@ Bewertungskriterien
 - (Whatsapp)
 - Weitere exotische Messenger-Dienste
 
-```notes
+<Notes>
+
 - Auf was für Kanälen können Chatbots kommunizieren?
-```
+
+</Notes>
 
 ---
 
-## Vorteile von Chatbots gegenüber anderen interaktiven Medien
+## Vorteile 
+
+Vorteile von Chatbots gegenüber anderen interaktiven Medien
 
 <ul>
   <Appear>
@@ -158,9 +192,11 @@ Bewertungskriterien
   </Appear>
 </ul>
 
-```notes
+<Notes>
+
 - Was sind die Vorteile von Chatbots gegenüber anderen Kanälen?
-```
+
+</Notes>
 
 ---
 
@@ -194,10 +230,7 @@ Bewertungskriterien
 
 ## Bau einen Chatbot
 
-[www.dialogflow.com](www.dialogflow.com)
-
-<small>Ihr benötigt einen Google Account</small>
-
+- [www.dialogflow.com](www.dialogflow.com) <small>Ihr benötigt einen Google Account</small>
 - Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
 - Verwende min. eine Absicht mit einer Entität
 - Baut den Chatbot (30min)
