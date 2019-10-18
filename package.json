@@ -4,7 +4,7 @@
   "description": "Chatbot Vorlesung",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "build": "mdx-deck build deck.mdx && npm run pdf",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck"
