@@ -1,24 +1,29 @@
-import { Head } from 'mdx-deck'
+import { Head, Steps, Notes, Image, themes } from 'mdx-deck'
 
-export { default as theme } from './theme'
+import bot from './bot.png'
+import pdf from './deck.pdf'
+
+export const theme = themes.swiss
 
 <Head>
   <title>Chatbots</title>
 </Head>
 
 # Chatbots
+<small> ➜ Pfeiltasten zur nächsten Slide</small>
 
-[PDF](presentation.pdf)
+<a style={{display: 'block', marginTop: '1em'}} href={pdf}>PDF</a>
+
+<img src={bot} style={{display: 'block', width: '40%', height: '60%', marginLeft: 'auto'}} />
 
 ---
 
-# Philip Schönholzer
+## Philip Schönholzer
 
 - Wohne in Luzern
 - Kommunikation und Informatik
-- Interaction Design
+- Requirements Engineering & Interaction Design
 - Mitgründer der Apptiva AG und Botfabrik
-- Viel unterwegs
 
 ---
 
@@ -26,78 +31,82 @@ export { default as theme } from './theme'
 
 - [Geschenkidee.ch](https://www.geschenkidee.ch)
 - [Postfinance](https://www.postfinance.ch/de/privat/support/chat.html)
-- [Schweizer Parlament](https://www.parlament.ch/Documents/parli-d.html)
+- [Roche Lehrstellen](https://www.roche.com/de/careers/country/switzerland/ch-your-job/lernende.htm)
 - [Swica](https://www.swica.ch)
 - [Selma](https://www.selma.io/de)
 - [Vorwerk Geschäftsbereicht](https://geschaeftsberichte.vorwerk.de/2017/fuehlen/)
 
-```notes
+<Notes>
 - Wer kennt noch weitere Beispiele?
 - Schaut euch diese 15min an, um einen Eindruck der heutigen Chatbots zu erhalten
-```
+</Notes>
 
 ---
 
 ## Was ist ein Bot?
 
----
-
-## Was ist ein Bot?
+<Steps>
 
 - Ein Programm, dass eine Aufgabe selbständig ausführt
 - Ist lernfähig
 - Ist intelligent (?)
 - Findet eine Konversation statt, so wird von Chatbots gesprochen
 
+</Steps>
+
 ---
+import channels from './channels.png'
 
 ## Warum Chatbots einsetzen?
 
-![](./channels.png)
-
-<small>Quelle: http://media-use-index.ch/assets/files/MUI2017.pdf</small>
-
-```notes
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
-```
+
+<img style={{ display: 'block', width: 500, height: 300}} src={channels} />
+
+
+<Notes>
+  - Smartphone ist das meistgenutzte Medium
+  - Messaging ist die wichtigste App auf dem Smartphone
+  - Chatbots sind dort wo die Nutzer sind
+</Notes>
+
 
 ---
 
-import { Appear } from 'mdx-deck'
-import { TitleSplit } from './layouts'
-
-export default TitleSplit
-
-## Eigenschaften und Bewertungskriterien
+## Eigenschaften
 
 - kleiner / grosser Umfang
 - eine Sprache / viele Sprachen
 - ...
 
+## Bewertungskriterien
+
 * Zielerreichung
 * Einfachheit
 * ...
 
-```notes
-Eigenschaften
-- Bot führt / Besucher führt
-- Freitext / Fixe Antworten
-- FAQ / Assistent
-- einem / mehrere Kanäle
-- Gibt sich als Mensch / Bot aus
-- Nur Text / Bilder, Ton, Video
+<Notes>
+  Eigenschaften
+  - Bot führt / Besucher führt
+  - Freitext / Fixe Antworten
+  - FAQ / Assistent
+  - einem / mehrere Kanäle
+  - Gibt sich als Mensch / Bot aus
+  - Nur Text / Bilder, Ton, Video
+  
+  Bewertungskriterien
+  
+  - Absichten korrekt verstanden
+  - Funktionen sind klar
+  - Fallback
+  - Chatbot Challenge
+  
+  * Kategorisiert und Bewertet den Chatbot (Zweiergruppe)
+  * 3min vorstellen
+</Notes>
 
-Bewertungskriterien
-* Absichten korrekt verstanden
-* Funktionen sind klar
-* Fallback
-* Chatbot Challenge
-
-- Kategorisiert und Bewertet den Chatbot (Zweiergruppe)
-- 3min vorstellen
-```
 
 ---
 
@@ -108,22 +117,18 @@ Bewertungskriterien
 
 (3min je Gruppe)
 
-```notes
-
-```
-
 ---
 
 ## Einsatzmöglichkeiten von Chatbots
 
----
-
-## Einsatzmöglichkeiten von Chatbots
+<Steps>
 
 - E-Commerce
 - Kundendienst
 - Marketing
 - Produktivität
+
+</Steps>
 
 ---
 
@@ -138,35 +143,36 @@ Bewertungskriterien
 - (Whatsapp)
 - Weitere exotische Messenger-Dienste
 
-```notes
-- Auf was für Kanälen können Chatbots kommunizieren?
-```
+<Notes>
+  - Auf was für Kanälen können Chatbots kommunizieren?
+</Notes>
 
 ---
 
 ## Vorteile von Chatbots gegenüber anderen interaktiven Medien
 
-<ul>
-  <Appear>
-    <li>Bots sind super einfach zu bedienen</li>
-    <li>Können das Gespräch aktiv wieder aufnehmen</li>
-    <li>Geben nicht bloss Antwort, sondern führen Aktionen aus</li>
-    <li>Die persönlichste Form der Interaktion mit einer Maschine</li>
-    <li>Bots haben Persönlichkeit</li>
-    <li>Möglichkeit zu lernen was die Besucher wollen</li>
-    <li>Entwicklungsaufwand hält sich in Grenzen</li>
-  </Appear>
-</ul>
+<Steps>
 
-```notes
-- Was sind die Vorteile von Chatbots gegenüber anderen Kanälen?
-```
+- Bots sind super einfach zu bedienen
+- Können das Gespräch aktiv wieder aufnehmen
+- Geben nicht bloss Antwort, sondern führen Aktionen aus
+- Die persönlichste Form der Interaktion mit einer Maschine
+- Bots haben Persönlichkeit
+- Möglichkeit zu lernen was die Besucher wollen
+- Entwicklungsaufwand hält sich in Grenzen
+
+</Steps>
+
+<Notes>
+  - Was sind die Vorteile von Chatbots gegenüber anderen Kanälen?
+</Notes>
 
 ---
 
 ## Funktionsweise von Chatbots
 
 - Freitext: NLP/NLU (Natural language processing/understanding)
+- Klick: Workflows
 - Konversation
 - Aktionen ausführen
 - Gespräch wieder aufnehmen
@@ -192,7 +198,7 @@ Bewertungskriterien
 
 ---
 
-## Bau einen Chatbot
+## Bau einen Freitext-Chatbot
 
 [www.dialogflow.com](www.dialogflow.com)
 
@@ -200,16 +206,57 @@ Bewertungskriterien
 
 - Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
 - Verwende min. eine Absicht mit einer Entität
-- Baut den Chatbot (30min)
+- Baut den Chatbot (15min)
 - Fragen, Austausch
-- Feinschliff
-- Einige Gruppe stellen ihren Chatbot vor (3min)
+- Einige Gruppe stellen ihren Chatbot vor
+
+---
+import convInterfaces from './conv-interfaces.jpeg'
+
+## Klickbots
+
+<small>Conversational Interfaces</small>
+
+- Einsatz unterscheidet sich von Freitext-Chatbots
+- Einfacher in allen Belangen
+- "Keine KI"
+
+<img style={{ display: 'block', width: 500, height: 300}}  src={convInterfaces} />
 
 ---
 
-## Vorstellen
+## Bau einen Klick-Chatbot
 
-(3min je Gruppe)
+[www.landbot.io](https://app.landbot.io/signup/)
+
+- Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
+- Verwende min. die Funktion um Email zu versenden
+- Baut den Chatbot (15min)
+- Fragen, Austausch
+- Einige Gruppe stellen ihren Chatbot vor
+
+---
+
+## Freitext- vs Klick-Chatbots
+
+- Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
+- Freitext wird vorallem im Kundensupport eingesetzt
+- Klick eignet sich wenn der Chatbot die Leitung des Gespräches hat
+- Klick wird vorallem für die Lead-Generierung und Verkauf eingesetzt
+
+---
+
+## Zusammenfassung
+
+<Steps>
+
+- Chatbots gehören zu den einfachsten UIs
+- Chatbots können auf vielen Kanälen aktiv sein
+- Chatbots führen Konversationen und lösen Aktionen aus
+- Es gibt Freitext- und Klick-Chatbots
+- "Intelligente" Chatbots setzen NLP (Natürliche Sprachverarbeitung) ein
+
+</Steps>
 
 ---
 

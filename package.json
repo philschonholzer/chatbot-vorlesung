@@ -4,24 +4,29 @@
   "description": "Chatbot Vorlesung",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx && npm run pdf",
-    "pdf": "mdx-deck pdf deck.mdx",
-    "image": "mdx-deck screenshot deck.mdx",
+    "build": "npm run pdf && mdx-deck build deck.mdx",
+    "pdf": "start-server-and-test start http://localhost:8000 pdf:generate",
+    "pdf:generate": "npx website-pdf http://localhost:8000/print -o deck.pdf",
     "help": "mdx-deck"
   },
   "keywords": [],
   "author": "Philip Schönholzer",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "mdx-deck": "^1.6.7",
-    "prettier": "^1.15.3"
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "mdx-deck": "^4.0.0",
+    "prettier": "^2.1.2",
+    "start-server-and-test": "^1.11.5",
+    "website-pdf": "^4.1.0"
   },
-  "name": "chatbot-vorlesung"
+  "name": "chatbot-vorlesung",
+  "dependencies": {
+    "styled-components": "^5.2.0"
+  }
 }
