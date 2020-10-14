@@ -4,7 +4,7 @@
   "description": "Chatbot Vorlesung",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "npm run pdf && mdx-deck build deck.mdx",
+    "build": "mdx-deck build deck.mdx",
     "pdf": "start-server-and-test start http://localhost:8000 pdf:generate",
     "pdf:generate": "npx website-pdf http://localhost:8000/print -o deck.pdf",
     "help": "mdx-deck"
