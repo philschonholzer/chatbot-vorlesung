@@ -1,27 +1,55 @@
-import { Head, Steps, Notes, Image, themes } from 'mdx-deck'
+---
+# try also 'default' to start simple
+theme: default
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://source.unsplash.com/collection/94734566/1920x1080
+# apply any windi css classes to the current slide
+class: 'text-center'
+# https://sli.dev/custom/highlighters.html
+highlighter: shiki
+# show line numbers in code blocks
+lineNumbers: false
+# some information about the slides, markdown enabled
+info: |
+  ## Slidev Starter Template
+  Presentation slides for developers.
 
-import bot from './bot.png'
-import pdf from './deck.pdf'
-
-export const theme = themes.swiss
-
-<Head>
-  <title>Chatbots</title>
-</Head>
+  Learn more at [Sli.dev](https://sli.dev)
+# persist drawings in exports and build
+drawings:
+  persist: false
+# use UnoCSS
+css: unocss
+download: true
+---
 
 # Chatbots
 
-<small> ➜ Pfeiltasten zur nächsten Slide</small>
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Space-Taste für die nächste Seite <carbon:arrow-right class="inline"/>
+  </span>
+</div>
 
-<a style={{ display: 'block', marginTop: '1em' }} href={pdf}>
-  PDF
-</a>
+<div class="abs-tl m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Im Editor öffnen" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/philschonholzer/chatbot-vorlesung" target="_blank" alt="GitHub"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
 
-<img src={bot} style={{ display: 'block', width: '40%', height: '60%', marginLeft: 'auto' }} />
+
+<img src="/bot.png" class="absolute bottom-9 right-7 w-60" />
 
 ---
 
-## Philip Schönholzer
+# Philip Schönholzer
+
+Über mich
 
 - Wohne in Luzern
 - Kommunikation und Informatik
@@ -30,7 +58,9 @@ export const theme = themes.swiss
 
 ---
 
-## Beispiele von Chatbots
+# Beispiele von Chatbots
+
+Wie unterscheiden sich diese Chatbots?
 
 - [Post](https://www.post.ch/de/hilfe-und-kontakt)
 - [Postfinance](https://www.postfinance.ch/de/support.html)
@@ -38,92 +68,92 @@ export const theme = themes.swiss
 - [Selma](https://app.selma.com/de/signup)
 - [Geschenkidee.ch](https://www.geschenkidee.ch/donregalo)
 
-<Notes>
 
 
+<!-- 
 - Wer kennt noch weitere Beispiele?
-- Schaut euch diese 5min an, um einen Eindruck der heutigen Chatbots zu erhalten
-
-</Notes>
-
+- Schaut euch diese 5min an, um einen Eindruck der heutigen Chatbots zu erhalten 
+-->
 
 ---
 
-## Was ist ein Bot?
+# Was ist ein Bot?
 
-<Steps>
-
+<v-clicks>
 
 - Ein Programm, dass eine Aufgabe selbständig ausführt
 - Ist lernfähig
 - Ist intelligent (?)
 - Findet eine Konversation statt, so wird von Chatbots gesprochen
 
-</Steps>
-
+</v-clicks>
 
 ---
 
-import channels from './mediennutzung.jpg'
-import activity from './aktivitaeten.jpg'
-
-## Warum Chatbots einsetzen?
+# Warum Chatbots einsetzen?
 
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
 
-<img style={{ width: 550, height: 330 }} src={channels} />
-<img style={{ width: 550, height: 330 }} src={activity} />
+<div class="flex gap-4 mt-10">
+  <img src="/mediennutzung.jpg" class="h-60 rounded shadow"/>
+  <img src="/aktivitaeten.jpg" class="h-60 rounded shadow"/>
+</div>
 
-<Notes>
-
-
+<!-- 
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
+ -->
 
-</Notes>
-
-
+---
+layout: two-cols
 ---
 
 ## Eigenschaften
 
-- kleiner / grosser Umfang
-- eine Sprache / viele Sprachen
+Kategorisieren, ohne zu werten
+
+- Gibt sich als Mensch / Bot aus
+- Sachlich / Witzig
 - ...
 
+::right::
+
 ## Bewertungskriterien
+
+Was macht einen gute Chatbot aus
 
 - Zielerreichung
 - Einfachheit
 - ...
 
-<Notes>
-
-
+<!-- 
 - Eigenschaften
   - Bot führt / Besucher führt
   - Freitext / Fixe Antworten
-  - FAQ / Assistent - einem / mehrere Kanäle
-  - Gibt sich als Mensch / Bot aus
+  - FAQ / Assistent
+  - einem / mehrere Kanäle
   - Nur Text / Bilder, Ton, Video
+  - kleiner / grosser Umfang
+  - eine Sprache / mehrere Sprachen
+  
 - Bewertungskriterien
   - Absichten korrekt verstanden
   - Funktionen sind klar
   - Fallback
   - Chatbot Challenge
+  - ROI für das Unternehmen
+
 - Weiter
   - Kategorisiert und Bewertet den Chatbot (Zweiergruppe)
   - 3min vorstellen
-
-</Notes>
-
+ -->
 
 ---
 
-## Kurze Vorstellung des Chatbots
+# Kurze Vorstellung des Chatbots
 
 - Kategorisiert nach Eigenschaften
 - Bewertet nach Kriterien
@@ -132,22 +162,24 @@ import activity from './aktivitaeten.jpg'
 
 ---
 
-## Einsatzmöglichkeiten von Chatbots
+# Einsatzmöglichkeiten von Chatbots
 
-<Steps>
+Wofür setzten man Chatbots heute ein
 
+<v-clicks>
 
 - E-Commerce
 - Kundendienst
 - Marketing
 - Produktivität
 
-</Steps>
-
+</v-clicks>
 
 ---
 
-## Kanäle von Chatbots
+# Kanäle von Chatbots
+
+Auf was für Kanälen können Chatbots kommunizieren?
 
 - Web
 - WhatsApp
@@ -158,20 +190,13 @@ import activity from './aktivitaeten.jpg'
 - Telegram
 - Weitere exotische Messenger-Dienste
 
-<Notes>
-
-
-- Auf was für Kanälen können Chatbots kommunizieren?
-
-</Notes>
-
-
 ---
 
-## Vorteile von Chatbots gegenüber anderen interaktiven Medien
+# Vorteile von Chatbots
 
-<Steps>
+Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 
+<v-clicks>
 
 - Bots sind super einfach zu bedienen
 - Können das Gespräch aktiv wieder aufnehmen
@@ -181,20 +206,11 @@ import activity from './aktivitaeten.jpg'
 - Möglichkeit zu lernen was die Besucher wollen
 - Entwicklungsaufwand hält sich in Grenzen
 
-</Steps>
-
-
-<Notes>
-
-
-- Was sind die Vorteile von Chatbots gegenüber anderen Kanälen?
-
-</Notes>
-
+</v-clicks>
 
 ---
 
-## Funktionsweise von Chatbots
+# Funktionsweise von Chatbots
 
 - Freitext: NLP/NLU (Natural language processing/understanding)
 - Klick: Workflows
@@ -204,7 +220,7 @@ import activity from './aktivitaeten.jpg'
 
 ---
 
-## NLP/NLU
+# NLP/NLU
 
 - NLP basiert auf Absichten und Entitäten (Intents und Entities)
 - Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
@@ -212,7 +228,7 @@ import activity from './aktivitaeten.jpg'
 
 ---
 
-## NLP/NLU-Tools
+# NLP/NLU-Produkte
 
 - Dialogflow (Google)
 - Watson (IBM)
@@ -223,11 +239,10 @@ import activity from './aktivitaeten.jpg'
 
 ---
 
-## Bau einen Freitext-Chatbot
+# Bau einen Freitext-Chatbot
+Ihr benötigt einen Google Account
 
-[www.dialogflow.com](https://dialogflow.cloud.google.com/
-
-<small>Ihr benötigt einen Google Account</small>
+[dialogflow.cloud.google.com](https://dialogflow.cloud.google.com/)
 
 - Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
 - Verwende min. eine Absicht mit einer Entität
@@ -237,21 +252,20 @@ import activity from './aktivitaeten.jpg'
 
 ---
 
-import convInterfaces from './conv-interfaces.jpeg'
+# Klickbots
 
-## Klickbots
+Conversational Interfaces
 
-<small>Conversational Interfaces</small>
 
 - Einsatz unterscheidet sich von Freitext-Chatbots
 - Einfacher in allen Belangen
 - "Keine KI"
 
-<img style={{ display: 'block', width: 600, height: 360 }} src={convInterfaces} />
+<img src="/conv-interfaces.jpg" class="mt-4 h-25vh" />
 
 ---
 
-## Bau einen Klick-Chatbot
+# Bau einen Klick-Chatbot
 
 [www.landbot.io](https://app.landbot.io/signup/)
 
@@ -263,7 +277,7 @@ import convInterfaces from './conv-interfaces.jpeg'
 
 ---
 
-## Freitext- vs Klick-Chatbots
+# Freitext- vs Klick-Chatbots
 
 - Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
 - Freitext wird vorallem im Kundensupport eingesetzt
@@ -272,10 +286,9 @@ import convInterfaces from './conv-interfaces.jpeg'
 
 ---
 
-## Zusammenfassung
+# Zusammenfassung
 
-<Steps>
-
+<v-clicks>
 
 - Chatbots gehören zu den einfachsten UIs
 - Chatbots können auf vielen Kanälen aktiv sein
@@ -283,9 +296,11 @@ import convInterfaces from './conv-interfaces.jpeg'
 - Es gibt Freitext- und Klick-Chatbots
 - "Intelligente" Chatbots setzen NLP (Natürliche Sprachverarbeitung) ein
 
-</Steps>
-
+</v-clicks>
 
 ---
+layout: center
+class: text-center
+---
 
-## Fragen?
+# Fragen?

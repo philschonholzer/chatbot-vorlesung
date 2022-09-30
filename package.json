@@ -1,32 +1,18 @@
 {
+  "name": "v3",
   "private": true,
-  "version": "1.2.0",
-  "description": "Chatbot Vorlesung",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
-    "pdf": "start-server-and-test start http://localhost:8000 pdf:generate",
-    "pdf:generate": "npx website-pdf http://localhost:8000/print -o deck.pdf",
-    "help": "mdx-deck"
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
   },
-  "keywords": [],
-  "author": "Philip Schönholzer",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.4",
-    "mdx-deck": "^4.0.0",
-    "prettier": "^2.1.2",
-    "start-server-and-test": "^1.11.5",
-    "website-pdf": "^4.1.0"
-  },
-  "name": "chatbot-vorlesung",
   "dependencies": {
-    "styled-components": "^5.2.0"
+    "@slidev/cli": "^0.36.5",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.26.1",
+    "postcss": "^8.2.14"
   }
 }
