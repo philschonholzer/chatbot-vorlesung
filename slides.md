@@ -42,7 +42,6 @@ download: true
   </a>
 </div>
 
-
 <img src="/bot.png" class="absolute bottom-9 right-7 w-60" />
 
 ---
@@ -67,8 +66,6 @@ Wie unterscheiden sich diese Chatbots?
 - [Swica](https://www.swica.ch)
 - [Selma](https://app.selma.com/de/signup)
 - [Geschenkidee.ch](https://www.geschenkidee.ch/donregalo)
-
-
 
 <!-- 
 - Wer kennt noch weitere Beispiele?
@@ -105,6 +102,7 @@ Wie unterscheiden sich diese Chatbots?
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
+- GPT wurde erst mit dem Chat-interface extrem erfolgreich
  -->
 
 ---
@@ -168,10 +166,15 @@ Wofür setzten man Chatbots heute ein
 
 <v-clicks>
 
-- E-Commerce
+- Produktivität (NEU)
+  - Erstellung von Inhalten
+  - Code schreiben
+- Lernen (NEU)
+  - Wissen erarbeiten
+  - Recherchieren
 - Kundendienst
+- E-Commerce
 - Marketing
-- Produktivität
 
 </v-clicks>
 
@@ -212,23 +215,35 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 
 # Funktionsweise von Chatbots
 
+<v-clicks>
+
 - Freitext: NLP/NLU (Natural language processing/understanding)
+  - Absichtserkennung (Intent)
+  - Erkennung von Entitäten (Entity)
+  - GPT (General Pre-trained Transformer), LLM (Large Language Model)
 - Klick: Workflows
 - Konversation
 - Aktionen ausführen
 - Gespräch wieder aufnehmen
 
+</v-clicks>
+
 ---
 
 # NLP/NLU
 
-- NLP basiert auf Absichten und Entitäten (Intents und Entities)
-- Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
-- Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
+- NLP basiert auf Absichten und Entitäten (Intents und Entities) oder einem General Pre-trained Transformer / Large Language Model
+- Absichtserkennung: Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
+- Erkennen von Entitäten: Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
+- GPT/LLM: Freitext -> Text nehmen und das wahrscheinlichste nächste Token (mit etwas Zufall) ermitteln usw.
+
+<!--
+Bessere Darstellung
+-->
 
 ---
 
-# NLP/NLU-Produkte
+# Technologien für Absichts- und Entitäten-Erkennung
 
 - Dialogflow (Google)
 - Watson (IBM)
@@ -239,7 +254,55 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 
 ---
 
+# Aktuelle LLMs
+
+- GPT-4 (OpenAI)
+- Claude 2 (Anthropic)
+- Cohere
+- LaMDA (Google Bard)
+- PaLM (Google Generative)
+- Llama2 (Meta)
+
+---
+
+# Klickbots
+
+Conversational Interfaces
+
+- Einsatz unterscheidet sich von Freitext-Chatbots
+- Einfacher in allen Belangen
+- "Keine KI"
+
+<img src="/conv-interfaces.jpg" class="mt-4 h-25vh" />
+
+---
+
+# "Schlüsselfertige" Chatbot Lösungen für eine Produkt oder Webseite
+
+## Freitext
+
+- Bubble Chat
+- Moin.ai
+- Tars
+
+## Klickbot
+
+- Landbot
+- aiaibot
+
+---
+
+# Freitext- vs Klick-Chatbots
+
+- Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
+- Freitext wird vor allem zum Lernen, zur Erhöhung der Produktivität und im Kundensupport eingesetzt
+- Klick eignet sich wenn der Chatbot die Leitung des Gespräches hat
+- Klick wird vor allem für die Lead-Generierung und Verkauf eingesetzt
+
+---
+
 # Bau einen Freitext-Chatbot
+
 Ihr benötigt einen Google Account
 
 [dialogflow.cloud.google.com](https://dialogflow.cloud.google.com/)
@@ -252,19 +315,6 @@ Ihr benötigt einen Google Account
 
 ---
 
-# Klickbots
-
-Conversational Interfaces
-
-
-- Einsatz unterscheidet sich von Freitext-Chatbots
-- Einfacher in allen Belangen
-- "Keine KI"
-
-<img src="/conv-interfaces.jpg" class="mt-4 h-25vh" />
-
----
-
 # Bau einen Klick-Chatbot
 
 [www.landbot.io](https://app.landbot.io/signup/)
@@ -274,15 +324,6 @@ Conversational Interfaces
 - Baut den Chatbot (15min)
 - Fragen, Austausch
 - Einige Gruppe stellen ihren Chatbot vor
-
----
-
-# Freitext- vs Klick-Chatbots
-
-- Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
-- Freitext wird vorallem im Kundensupport eingesetzt
-- Klick eignet sich wenn der Chatbot die Leitung des Gespräches hat
-- Klick wird vorallem für die Lead-Generierung und Verkauf eingesetzt
 
 ---
 
