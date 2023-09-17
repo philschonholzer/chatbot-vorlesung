@@ -3,16 +3,16 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev --open",
+    "dev": "slidev",
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.36.5",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/cli": "^0.43.3",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.3"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.26.1",
-    "postcss": "^8.2.14"
+    "playwright-chromium": "^1.38.0",
+    "postcss": "^8.4.29"
   }
 }
