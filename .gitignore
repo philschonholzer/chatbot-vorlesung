@@ -5,3 +5,14 @@ dist
 index.html
 .remote-assets
 components.d.ts
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+

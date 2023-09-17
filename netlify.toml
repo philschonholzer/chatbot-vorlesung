@@ -1,15 +1,8 @@
-[build.environment]
-  NPM_FLAGS="--prefix=/dev/null"
-  NODE_VERSION = "14"
-
 [build]
-  command = "npx pnpm build"
-  publish = "dist"
+command = "pnpm build"
+publish = "dist"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[plugins]]
-  package = "./plugins/pnpm-preinstaller"
+from = "/*"
+to = "/index.html"
+status = 200
