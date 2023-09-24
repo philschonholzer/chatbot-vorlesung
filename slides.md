@@ -213,32 +213,103 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 
 ---
 
-# Funktionsweise von Chatbots
+# Funktionsumfang von Chatbots
 
 <v-clicks>
 
-- Freitext: NLP/NLU (Natural language processing/understanding)
-  - Absichtserkennung (Intent)
-  - Erkennung von Entitäten (Entity)
-  - GPT (General Pre-trained Transformer), LLM (Large Language Model)
-- Klick: Workflows
-- Konversation
-- Aktionen ausführen
-- Gespräch wieder aufnehmen
+- Natürliche Sprachverarbeitung
+- Antworten generieren
+- Dialogmanagement
+- Umsysteme integrieren
+  - Bessere Antworten generieren wie z.B. Status einer Bestellung abfragen
+  - Aktionen ausführen wie z.B. Produktbestellung, Buchungen oder Terminvereinbarungen 
+- Notifikationen senden
 
 </v-clicks>
 
+
+
 ---
+layout: two-cols-header
+---
+
+# Gesprächstypen (Interaktionsstile) von Chatbots (1/2)
+
+## Strukturierte / eingeschränkte Chatbots
+
+:: left ::
+
+- Beschränken die Antworten auf einen vordefinierten Satz von Optionen
+- Optionen als Liste von Multiple-Choice-Fragen
+- Benutzer wählen eine der vorgegebenen Optionen aus
+- Antworten basieren auf den ausgewählten Optionen und erfordern kein NLP
+- Nuten Logik (z.B. Workflows) um den Ablauf zu definieren
+
+:: right ::
+
+<img src="/workflow.excalidraw.svg" class="ml-10 rounded"/>
+
+---
+layout: two-cols-header
+---
+
+# Gesprächstypen (Interaktionsstile) von Chatbots (2/2)
+
+## Offener / hybrider Chatbot
+
+:: left::
+
+<v-clicks>
+
+- Erlaubt die Eingabe von Freitext
+- Versucht den Text zu interpretieren
+- Generiert Antworten aufgrund der Interpretation
+- Die Leitung des Gesprächs grösstenteils bei den Nutzern 
+- Nutzen NLP/NLU (Natural Language Processing/Understanding)
+
+</v-clicks>
+
+:: right ::
+
+<img src="/open.excalidraw.svg" class="mx-10 rounded"/>
+<div class="h-40"></div>
+
+---
+
 
 # NLP/NLU
 
-- NLP basiert auf Absichten und Entitäten (Intents und Entities) oder einem General Pre-trained Transformer / Large Language Model
-- Absichtserkennung: Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
-- Erkennen von Entitäten: Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
-- GPT/LLM: Freitext -> Text nehmen und das wahrscheinlichste nächste Token (mit etwas Zufall) ermitteln usw.
+NLP (Natural Language Processing/Understanding) basiert auf Absichten und Entitäten (Intents und Entities) oder einem General Pre-trained Transformer / Large Language Model
+## Absichtserkennung
+Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
+
+## Erkennen von Entitäten
+Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
+
+## GPT/LLM
+Freitext -> Das wahrscheinlichste nächste Token (mit etwas Zufall) ermitteln. Den neuen Text nehmen und das wahrscheinlichste nächste Token ermitteln, usw.
 
 <!--
 Bessere Darstellung
+-->
+
+---
+
+# Gegenüberstellung der Technologien
+
+|  | **Workflow** | **Absichtserkennung** | **Large Language Model** |
+| -------- | -------- | -------- | -------- |
+| Gesprächstypen | Strukturiert | Offen | Offen  |
+| Leitung des Gesprächs   | Chatbot   | Benutzer   | Benutzer   |
+| Beste Eignung  | - Bestellprozess<br>- Lead-Generierung   | - FAQ<br>- Verkauf   | - FAQ<br>- Lernen<br>- Erhöhung Produktivität   |
+| "Korrektheit"   | Fehlerlos   | Kann Absicht <br>falsch interpretieren   | Kann halluzinieren   |
+| Pflege   | Manuell, bei Änderung   | Regelmässig trainieren   | Dokumente aktuell halten  |
+
+<!--
+- Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
+- Freitext wird vor allem zum Lernen, zur Erhöhung der Produktivität und im Kundensupport eingesetzt
+- Klick eignet sich wenn der Chatbot die Leitung des Gespräches hat
+- Klick wird vor allem für die Lead-Generierung und Verkauf eingesetzt
 -->
 
 ---
@@ -264,44 +335,29 @@ Bessere Darstellung
 - Llama2 (Meta)
 
 ---
-
-# Klickbots
-
-Conversational Interfaces
-
-- Einsatz unterscheidet sich von Freitext-Chatbots
-- Einfacher in allen Belangen
-- "Keine KI"
-
-<img src="/conv-interfaces.jpg" class="mt-4 h-25vh" />
-
+layout: two-cols-header
 ---
 
-# "Schlüsselfertige" Chatbot Lösungen für eine Produkt oder Webseite
+# "Schlüsselfertige" Chatbot Lösungen für ein Produkt oder eine Webseite
 
-## Freitext
+:: left::
+## Strukturierte Chatbots
+
+- Landbot
+- aiaibot
+
+<div class="h-60"></div>
+
+::right ::
+## Offene Chatbots
 
 - Bubble Chat
 - Moin.ai
 - Tars
 
-## Klickbot
-
-- Landbot
-- aiaibot
-
 ---
 
-# Freitext- vs Klick-Chatbots
-
-- Freitext eignet sich um FAQs zu beantworten oder wenn der Anwender die Leitung des Gesprächs hat
-- Freitext wird vor allem zum Lernen, zur Erhöhung der Produktivität und im Kundensupport eingesetzt
-- Klick eignet sich wenn der Chatbot die Leitung des Gespräches hat
-- Klick wird vor allem für die Lead-Generierung und Verkauf eingesetzt
-
----
-
-# Bau einen Freitext-Chatbot
+# Bau einen offene Chatbot
 
 Ihr benötigt einen Google Account
 
@@ -315,7 +371,7 @@ Ihr benötigt einen Google Account
 
 ---
 
-# Bau einen Klick-Chatbot
+# Bau einen strukturierten Chatbot
 
 [www.landbot.io](https://app.landbot.io/signup/)
 
@@ -334,7 +390,8 @@ Ihr benötigt einen Google Account
 - Chatbots gehören zu den einfachsten UIs
 - Chatbots können auf vielen Kanälen aktiv sein
 - Chatbots führen Konversationen und lösen Aktionen aus
-- Es gibt Freitext- und Klick-Chatbots
+- Es gibt strukturierte und offene Chatbots
+- Je nach Anforderung, die richtige Technologie nutzen
 - "Intelligente" Chatbots setzen NLP (Natürliche Sprachverarbeitung) ein
 
 </v-clicks>
