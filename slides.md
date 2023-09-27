@@ -40,6 +40,10 @@ download: true
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
+  <a href="/slides-export.pdf" target="_blank" alt="PDF"
+    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:document-pdf />
+  </a>
 </div>
 
 <img src="/bot.png" class="absolute bottom-9 right-7 w-60" />
@@ -107,7 +111,6 @@ Wie unterscheiden sich diese Chatbots?
  -->
 
 ---
-
 layout: two-cols
 ---
 
@@ -230,7 +233,6 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 </v-clicks>
 
 ---
-
 layout: two-cols-header
 ---
 
@@ -251,7 +253,6 @@ layout: two-cols-header
 <img src="/workflow.excalidraw.svg" class="ml-10 rounded"/>
 
 ---
-
 layout: two-cols-header
 ---
 
@@ -340,7 +341,6 @@ Bessere Darstellung
 - Llama2 (Meta)
 
 ---
-
 layout: two-cols-header
 ---
 
@@ -405,7 +405,6 @@ Ihr benötigt einen Google Account
 </v-clicks>
 
 ---
-
 layout: center
 class: text-center
 ---
