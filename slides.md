@@ -40,7 +40,7 @@ download: true
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
-  <a href="/slides-export.pdf" target="_blank" alt="PDF"
+  <a href="/slidev-exported.pdf" target="_blank" alt="PDF"
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:document-pdf />
   </a>

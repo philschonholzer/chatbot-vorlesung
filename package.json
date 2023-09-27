@@ -2,7 +2,7 @@
   "name": "v3",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "pnpm exec playwright install && slidev build",
     "dev": "slidev",
     "export": "slidev export"
   },
