@@ -66,6 +66,7 @@ Wie unterscheiden sich diese Chatbots?
 - [Swica](https://www.swica.ch)
 - [Selma](https://app.selma.com/de/signup)
 - [Geschenkidee.ch](https://www.geschenkidee.ch/donregalo)
+- [ChatGPT](https://chat.openai.com/)
 
 <!-- 
 - Wer kennt noch weitere Beispiele?
@@ -106,6 +107,7 @@ Wie unterscheiden sich diese Chatbots?
  -->
 
 ---
+
 layout: two-cols
 ---
 
@@ -222,14 +224,13 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 - Dialogmanagement
 - Umsysteme integrieren
   - Bessere Antworten generieren wie z.B. Status einer Bestellung abfragen
-  - Aktionen ausführen wie z.B. Produktbestellung, Buchungen oder Terminvereinbarungen 
+  - Aktionen ausführen wie z.B. Produktbestellung, Buchungen oder Terminvereinbarungen
 - Notifikationen senden
 
 </v-clicks>
 
-
-
 ---
+
 layout: two-cols-header
 ---
 
@@ -250,6 +251,7 @@ layout: two-cols-header
 <img src="/workflow.excalidraw.svg" class="ml-10 rounded"/>
 
 ---
+
 layout: two-cols-header
 ---
 
@@ -264,7 +266,7 @@ layout: two-cols-header
 - Erlaubt die Eingabe von Freitext
 - Versucht den Text zu interpretieren
 - Generiert Antworten aufgrund der Interpretation
-- Die Leitung des Gesprächs grösstenteils bei den Nutzern 
+- Die Leitung des Gesprächs grösstenteils bei den Nutzern
 - Nutzen NLP/NLU (Natural Language Processing/Understanding)
 
 </v-clicks>
@@ -276,17 +278,20 @@ layout: two-cols-header
 
 ---
 
-
 # NLP/NLU
 
 NLP (Natural Language Processing/Understanding) basiert auf Absichten und Entitäten (Intents und Entities) oder einem General Pre-trained Transformer / Large Language Model
+
 ## Absichtserkennung
+
 Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
 
 ## Erkennen von Entitäten
+
 Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
 
 ## GPT/LLM
+
 Freitext -> Das wahrscheinlichste nächste Token (mit etwas Zufall) ermitteln. Den neuen Text nehmen und das wahrscheinlichste nächste Token ermitteln, usw.
 
 <!--
@@ -335,12 +340,14 @@ Bessere Darstellung
 - Llama2 (Meta)
 
 ---
+
 layout: two-cols-header
 ---
 
 # "Schlüsselfertige" Chatbot Lösungen für ein Produkt oder eine Webseite
 
 :: left::
+
 ## Strukturierte Chatbots
 
 - Landbot
@@ -349,6 +356,7 @@ layout: two-cols-header
 <div class="h-60"></div>
 
 ::right ::
+
 ## Offene Chatbots
 
 - Bubble Chat
@@ -397,6 +405,7 @@ Ihr benötigt einen Google Account
 </v-clicks>
 
 ---
+
 layout: center
 class: text-center
 ---
