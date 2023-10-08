@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "playwright-chromium": "^1.38.1",
-    "postcss": "^8.4.30"
+    "postcss": "^8.4.31"
   }
 }
