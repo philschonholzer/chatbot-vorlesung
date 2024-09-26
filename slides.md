@@ -57,24 +57,25 @@ download: true
 - Wohne in Luzern
 - Kommunikation und Informatik
 - Requirements Engineering & Interaction Design
-- Mitgründer der Apptiva AG und Botfabrik
+- Mitgründer der Apptiva AG
+- Entwickeln Chatbots seit 2016
 
 ---
 
 # Beispiele von Chatbots
 
-Wie unterscheiden sich diese Chatbots?
+Worin unterscheiden sich diese Chatbots?
 
 - [Post](https://www.post.ch/de/hilfe-und-kontakt)
 - [Postfinance](https://www.postfinance.ch/de/support.html)
 - [Swica](https://www.swica.ch)
-- [Selma](https://app.selma.com/de/signup)
+- [Selma](https://app.selma.com/de/signup) (Fake Email eingeben)
 - [Geschenkidee.ch](https://www.geschenkidee.ch/donregalo)
 - [ChatGPT](https://chat.openai.com/)
 
 <!-- 
 - Wer kennt noch weitere Beispiele?
-- Schaut euch diese 5min an, um einen Eindruck der heutigen Chatbots zu erhalten 
+- Schaut euch diese 5min an, um einen Eindruck von einigen Chatbots zu erhalten 
 -->
 
 ---
@@ -83,10 +84,10 @@ Wie unterscheiden sich diese Chatbots?
 
 <v-clicks>
 
-- Ein Programm, dass eine Aufgabe selbständig ausführt
-- Ist lernfähig
-- Ist intelligent (?)
-- Findet eine Konversation statt, so wird von Chatbots gesprochen
+- Ein Programm, das selbstständig eine Aufgabe ausführt.
+- lernfähig ist
+- intelligent ist (?)
+- Wenn eine Konversation stattfindet, spricht man von Chatbots.
 
 </v-clicks>
 
@@ -104,10 +105,11 @@ Wie unterscheiden sich diese Chatbots?
 </div>
 
 <!-- 
+Warum kein Formular, App, Webseite usw?
 - Smartphone ist das meistgenutzte Medium
 - Messaging ist die wichtigste App auf dem Smartphone
 - Chatbots sind dort wo die Nutzer sind
-- GPT wurde erst mit dem Chat-interface extrem erfolgreich
+- GPT wurde erst mit dem Chat-Interface extrem erfolgreich
  -->
 
 ---
@@ -126,7 +128,7 @@ Kategorisieren, ohne zu werten
 
 ## Bewertungskriterien
 
-Was macht einen gute Chatbot aus
+Was macht einen guten Chatbot aus?
 
 - Zielerreichung
 - Einfachheit
@@ -156,14 +158,6 @@ Was macht einen gute Chatbot aus
 
 ---
 
-# Kurze Vorstellung des Chatbots
-
-- Kategorisiert nach Eigenschaften
-- Bewertet nach Kriterien
-
-(3min je Gruppe)
-
----
 
 # Einsatzmöglichkeiten von Chatbots
 
@@ -206,13 +200,13 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 
 <v-clicks>
 
-- Bots sind super einfach zu bedienen
-- Können das Gespräch aktiv wieder aufnehmen
-- Geben nicht bloss Antwort, sondern führen Aktionen aus
-- Die persönlichste Form der Interaktion mit einer Maschine
+- Bots sind sehr einfach zu bedienen
+- Können die Konversation aktiv wieder aufnehmen
+- Antworten nicht nur, sondern führen Aktionen aus
+- Persönlichste Form der Interaktion mit einer Maschine
 - Bots haben Persönlichkeit
-- Möglichkeit zu lernen was die Besucher wollen
-- Entwicklungsaufwand hält sich in Grenzen
+- Lernen, was die Besucher wollen
+- Der Entwicklungsaufwand hält sich in Grenzen
 
 </v-clicks>
 
@@ -227,8 +221,8 @@ Was haben Chatbots für Vorteile gegenüber anderen interaktiven Medien
 - Dialogmanagement
 - Umsysteme integrieren
   - Bessere Antworten generieren wie z.B. Status einer Bestellung abfragen
-  - Aktionen ausführen wie z.B. Produktbestellung, Buchungen oder Terminvereinbarungen
-- Notifikationen senden
+  - Ausführen von Aktionen wie Produktbestellungen, Buchungen oder Terminvereinbarungen
+- Benachrichtigungen versenden
 
 </v-clicks>
 
@@ -242,11 +236,11 @@ layout: two-cols-header
 
 :: left ::
 
-- Beschränken die Antworten auf einen vordefinierten Satz von Optionen
+- Beschränken die möglichen Antworten auf einen vordefinierten Satz von Optionen
 - Optionen als Liste von Multiple-Choice-Fragen
 - Benutzer wählen eine der vorgegebenen Optionen aus
-- Antworten basieren auf den ausgewählten Optionen und erfordern kein NLP
-- Nuten Logik (z.B. Workflows) um den Ablauf zu definieren
+- Antworten basieren auf den gewählten Optionen und erfordern kein NLP
+- Verwendet Logik (z.B. Workflows) zur Definition des Prozesses
 
 :: right ::
 
@@ -268,7 +262,7 @@ layout: two-cols-header
 - Versucht den Text zu interpretieren
 - Generiert Antworten aufgrund der Interpretation
 - Die Leitung des Gesprächs grösstenteils bei den Nutzern
-- Nutzen NLP/NLU (Natural Language Processing/Understanding)
+- Nutzt NLP/NLU (Natural Language Processing/Understanding)
 
 </v-clicks>
 
@@ -293,8 +287,18 @@ Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne 
 
 ## GPT/LLM
 
-Freitext -> Das wahrscheinlichste nächste Token (mit etwas Zufall) ermitteln. Den neuen Text nehmen und das wahrscheinlichste nächste Token ermitteln, usw.
+Freitext -> Generiert Antwort. Ermittle das wahrscheinlichste nächste Token (mit etwas Zufall). Nimm den neuen Text und ermittle das wahrscheinlichste nächste Token usw.
 
+<!--
+Bessere Darstellung
+-->
+
+---
+
+# Techniken kombinieren
+
+<img src="/hybrid.svg" class="h-96"/>
+<p><small class="opacity-40">Quelle: Bubble Chat</small></p>
 <!--
 Bessere Darstellung
 -->
@@ -372,7 +376,7 @@ Ihr benötigt einen Google Account
 [dialogflow.cloud.google.com](https://dialogflow.cloud.google.com/)
 
 - Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
-- Verwende min. eine Absicht mit einer Entität
+- FAQ Chatbots sind am einfachsten in dieser kurzen Zeit zu bauen (Konversationen sind am schwierigsten)
 - Baut den Chatbot (15min)
 - Fragen, Austausch
 - Einige Gruppe stellen ihren Chatbot vor
@@ -383,11 +387,11 @@ Ihr benötigt einen Google Account
 
 [www.landbot.io](https://app.landbot.io/signup/)
 
-- Definiert das Ziel eures Chatbots bevor ihr mit dem Bauen beginnt
-- Verwende min. die Funktion um Email zu versenden
+- Definiere das Ziel deines Chatbots bevor du mit dem Bau beginnst.
+- Nutzt mindestens die Funktion zum Versenden von E-Mails.
 - Baut den Chatbot (15min)
 - Fragen, Austausch
-- Einige Gruppe stellen ihren Chatbot vor
+- Einige Gruppen präsentieren ihren Chatbot
 
 ---
 
@@ -396,11 +400,11 @@ Ihr benötigt einen Google Account
 <v-clicks>
 
 - Chatbots gehören zu den einfachsten UIs
-- Chatbots können auf vielen Kanälen aktiv sein
-- Chatbots führen Konversationen und lösen Aktionen aus
+- Chatbots können in vielen Kanälen aktiv sein
+- Chatbots führen Gespräche und lösen Aktionen aus
 - Es gibt strukturierte und offene Chatbots
-- Je nach Anforderung, die richtige Technologie nutzen
-- "Intelligente" Chatbots setzen NLP (Natürliche Sprachverarbeitung) ein
+- Je nach Anforderung die richtige Technologie einsetzen
+- Intelligente" Chatbots nutzen NLP (Natural Language Processing)
 
 </v-clicks>
 
