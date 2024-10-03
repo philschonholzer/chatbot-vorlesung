@@ -275,23 +275,32 @@ layout: two-cols-header
 
 # NLP/NLU
 
-NLP (Natural Language Processing/Understanding) basiert auf Absichten und Entitäten (Intents und Entities) oder einem General Pre-trained Transformer / Large Language Model
+NLP (Natural Language Processing/Understanding) kann durch verschiedene Ansätze oder Kombinationen von Ansätzen erreicht werden. Derzeit sind folgende Ansätze verbreitet:
 
 ## Absichtserkennung
 
 Freitext -> Absicht zuweisen (z.B. "Will ne Pizza" -> Absicht: Pizza bestellen)
 
-## Erkennen von Entitäten
+### Optional Entitäten erkennen
 
-Freitext -> Entitäten im Text extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
+Freitext -> Zusätzlich Entitäten extrahieren (z.B. "Will ne Proscuto" -> "Will ne {Entität: Pizza Prosciutto}")
 
-## GPT/LLM
+## Wissensabruf-unterstützte Generierung (RAG)
 
-Freitext -> Generiert Antwort. Ermittle das wahrscheinlichste nächste Token (mit etwas Zufall). Nimm den neuen Text und ermittle das wahrscheinlichste nächste Token usw.
+Freitext -> Daten aus einer externen Quelle verwenden, um Antworten mit einem Large language model (LLM) zu generieren.
 
 <!--
 Bessere Darstellung
 -->
+
+---
+
+# Wissensabruf-unterstützte Generierung (RAG)
+
+Retrieval-Augmented Generation (RAG) ist ein Ansatz in der natürlichen Sprachverarbeitung (NLP), der zwei Techniken kombiniert: Information Retrieval (Abruf von Informationen) und Textgenerierung. Der Hauptvorteil von RAG liegt darin, dass es Modelle, wie z.B. GPT, dabei unterstützt, präzisere und aktuellere Antworten zu generieren, indem es auf externe Wissensquellen zugreift, anstatt sich nur auf vortrainierte Daten zu verlassen.
+
+<img src="/rag.jpg" class="h-72"/>
+<small class="opacity-40">Quelle: AWS</small>
 
 ---
 
@@ -305,9 +314,9 @@ Bessere Darstellung
 
 ---
 
-# Gegenüberstellung der Technologien
+# Gegenüberstellung der Technologien / Ansätze
 
-|  | **Workflow** | **Absichtserkennung** | **Large Language Model** |
+|  | **Workflow** | **Absichtserkennung** | **LLM / RAG** |
 | -------- | -------- | -------- | -------- |
 | Gesprächstypen | Strukturiert | Offen | Offen  |
 | Leitung des Gesprächs   | Chatbot   | Benutzer   | Benutzer   |
