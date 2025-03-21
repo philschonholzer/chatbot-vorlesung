@@ -2,7 +2,7 @@
   "name": "v3",
   "private": true,
   "scripts": {
-    "build": "pnpm exec playwright install --with-deps chrome && slidev build",
+    "build": "pnpm exec playwright install --with-deps --only-shell chromium && slidev build",
     "dev": "slidev",
     "export": "slidev export"
   },
